@@ -19,12 +19,17 @@ window.onload = function () {
     );
     let strain = nameIn;
     console.log(strain);
-    let strainDes = strain.data[3].desc
+    let strainDes = strain.data[0].desc
+    let strainName = strain.data[0].name
+    let strainRace = strain.data[0].race
     console.log(strainDes)
     let tester = document.createElement("h1")
     tester.className.add = "see"
-    tester.innerHTML = strainDes
+    tester.innerHTML = `${strainName} is a ${strainRace}: ${strainDes}`
     testChild.appendChild(tester)
+
+    
+    
 
     
   })

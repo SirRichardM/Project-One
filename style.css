@@ -1,7 +1,7 @@
 header {
   padding: 75px 0 0 0 ;
   text-align: center;
-  background-image: url(headerphoto.jpg);
+  background-image: url(raink.png);
   background-size: cover;
   border: 5px solid black;
   color: white;
@@ -13,16 +13,64 @@ header {
   
 }
 
+h2 {
+  background-image: url(pebbles.jpg);
+  font-family: 'Bangers', cursive;
+  padding: 25px;
+  border: 5px solid black;
+  text-align: center;
+  text-shadow: 7px 7px black;
+  color: white;
+  font-size: 75px;
+  background-size: auto;
+  margin: 25px 100px 25px 100px;
+  border-radius: 10px;
+  
+  
+}
+
+h2:hover {
+  background-image: url(smoke.jpg);
+  
+  transition-duration: 5s;
+}
+
+h4{
+  margin: 20px;
+  border: 3px solid black;
+  padding: 5px;
+  border-radius: 25px;
+  background-image: url(pebbles.jpg);
+  font-family: 'Bangers', cursive;
+  text-shadow: 2px 2px black;
+  color: white;
+  font-size: 25px;
+}
+h4:hover {
+  cursor: pointer;
+  background-image: url(smoke.jpg);
+  transition-duration: 2s;
+  transform: scale(1.25);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.flexy {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
 body {
   display: inline;
   background-color: white;
+  
 }
 
-.name {
-  height: 50px;
-  width: 100px;
-  margin: 40px;
-  font-size: 30px;
+
+.flex-container {
+  display: flexbox;
+  flex-direction: row;
 }
 
 .head {
@@ -72,11 +120,13 @@ body {
     color: hotpink;
   }
   25% {
-    letter-spacing: 40px;
+    letter-spacing: 35px;
+    transform: scale(1.25);
+    transition: all 0.3s ease-in-out 0.2s;
    
   }
   50% {
-    letter-spacing: -40px;
+    
     color: yellow;
   }
   75% {
@@ -93,8 +143,33 @@ body {
 .see {
   margin: 50px;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
+
+
+
 
 h1 {
   font-family: 'Bangers', cursive;
+  text-shadow: 3px 3px violet;
+  background-color: lightgreen;
+  animation: see;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  border: 5px solid darkmagenta;
+  padding: 20px;
+  border-radius: 10px;
+  width: 600px;
+  text-align: center;
+  margin: 20px;
+}
+
+@keyframes see {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
