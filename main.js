@@ -3,7 +3,8 @@ window.onload = function () {
   let input = document.querySelector("#city");
   let submit = document.querySelector("#getTemp");
   let strainInp = document.querySelector("#strainInp")
-  let strain= document.querySelector("#strain")
+  let strain = document.querySelector("#strain")
+  let testChild = document.querySelector(".see")
 
   // define variables for input and submit
 
@@ -20,6 +21,11 @@ window.onload = function () {
     console.log(strain);
     let strainDes = strain.data[3].desc
     console.log(strainDes)
+    let tester = document.createElement("h1")
+    tester.className.add = "see"
+    tester.innerHTML = strainDes
+    testChild.appendChild(tester)
+
     
   })
 

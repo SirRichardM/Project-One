@@ -1,5 +1,5 @@
 header {
-  padding: 100px;
+  padding: 75px 0 0 0 ;
   text-align: center;
   background-image: url(headerphoto.jpg);
   background-size: cover;
@@ -8,6 +8,9 @@ header {
   font-size: 100px;
   font-family: 'Bangers', cursive;
   text-shadow: 7px 7px  black;
+  height: 250px;
+
+  
 }
 
 body {
@@ -24,8 +27,9 @@ body {
 
 .head {
   animation: head;
-  animation-duration: 10s;
+  animation-duration: 5s;
   animation-iteration-count: 1;
+  
 
 }
 
@@ -43,6 +47,7 @@ body {
     property: first-value;
     opacity: .25;
     letter-spacing: -40px;
+    font-size: 25px;
     
     
   }
@@ -64,10 +69,11 @@ body {
 @keyframes head2 {
   0% {
     
-    color: pink;
+    color: hotpink;
   }
   25% {
-    letter-spacing: 40px;;
+    letter-spacing: 40px;
+   
   }
   50% {
     letter-spacing: -40px;
@@ -75,6 +81,7 @@ body {
   }
   75% {
     color: skyblue;
+    
   }
 
   100% {
@@ -86,4 +93,8 @@ body {
 .see {
   margin: 50px;
   text-align: center;
+}
+
+h1 {
+  font-family: 'Bangers', cursive;
 }
