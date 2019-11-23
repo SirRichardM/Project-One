@@ -1,0 +1,89 @@
+header {
+  padding: 100px;
+  text-align: center;
+  background-image: url(headerphoto.jpg);
+  background-size: cover;
+  border: 5px solid black;
+  color: white;
+  font-size: 100px;
+  font-family: 'Bangers', cursive;
+  text-shadow: 7px 7px  black;
+}
+
+body {
+  display: inline;
+  background-color: white;
+}
+
+.name {
+  height: 50px;
+  width: 100px;
+  margin: 40px;
+  font-size: 30px;
+}
+
+.head {
+  animation: head;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+
+}
+
+#head2:hover {
+  color:skyblue;
+  cursor: cell;
+  animation: head2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes head {
+  0% {
+    property: first-value;
+    opacity: .25;
+    letter-spacing: -40px;
+    
+    
+  }
+  50% {
+   letter-spacing: 40px;
+  }
+
+  100%{
+    opacity: 1;
+    text-shadow: 7px 7px black;
+    
+    
+   
+
+  }
+}
+
+
+@keyframes head2 {
+  0% {
+    
+    color: pink;
+  }
+  25% {
+    letter-spacing: 40px;;
+  }
+  50% {
+    letter-spacing: -40px;
+    color: yellow;
+  }
+  75% {
+    color: skyblue;
+  }
+
+  100% {
+    letter-spacing: 2px;
+    color: lime;
+  }
+}
+
+.see {
+  margin: 50px;
+  text-align: center;
+}
