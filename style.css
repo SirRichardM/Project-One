@@ -27,12 +27,24 @@ h2 {
   border-radius: 10px;
   
   
+  
+}
+
+img {
+  border: 2px solid white;
+  width: 100px;
+  height: 100px;
+}
+
+img:hover {
+  background-image: url(smoke.jpg);
+  transition-duration: 3s;
 }
 
 h2:hover {
   background-image: url(smoke.jpg);
-  
   transition-duration: 5s;
+  
 }
 
 h4{
@@ -52,6 +64,7 @@ h4:hover {
   transition-duration: 2s;
   transform: scale(1.25);
   transition: all 0.3s ease-in-out 0s;
+  box-shadow: 3px 3px 5px black;
 }
 
 .flexy {
@@ -145,6 +158,9 @@ body {
   text-align: center;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+
 }
 
 
@@ -152,17 +168,18 @@ body {
 
 h1 {
   font-family: 'Bangers', cursive;
-  text-shadow: 3px 3px violet;
+  text-shadow: 3px 3px black;;
   background-color: lightgreen;
   animation: see;
   animation-duration: 2s;
   animation-iteration-count: 1;
-  border: 5px solid darkmagenta;
+  border: 5px solid black;
   padding: 20px;
   border-radius: 10px;
   width: 600px;
   text-align: center;
   margin: 20px;
+  color: white;
 }
 
 @keyframes see {
