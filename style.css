@@ -32,8 +32,8 @@ h2 {
 
 img {
   border: 2px solid white;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
 }
 
 img:hover {
@@ -169,7 +169,9 @@ body {
 h1 {
   font-family: 'Bangers', cursive;
   text-shadow: 3px 3px black;;
-  background-color: lightgreen;
+  background-image: url(smokee.jpeg);
+  background-size: cover;
+ 
   animation: see;
   animation-duration: 2s;
   animation-iteration-count: 1;
