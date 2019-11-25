@@ -18,12 +18,12 @@ window.onload = function () {
     
       
     );
-    let gif = await axios.get("http://api.giphy.com/v1/gifs/search?q=weed&api_key=VC8tFxRJWVzQj5LrvDTYc0YsEgUm4EhH&limit=20");
+    let gif = await axios.get("http://api.giphy.com/v1/gifs/search?q=weed&api_key=VC8tFxRJWVzQj5LrvDTYc0YsEgUm4EhH&limit=30");
     console.log(gif)
-    let ran = Math.floor(Math.random()*10)
-    let giffy = gif.data.data
-    let gifs = giffy[ran].embed_url
-    console.log(gifs)
+    // let ran = Math.floor(Math.random()*10)
+    // let giffy = gif.data.data
+    // let gifs = giffy[ran].embed_url
+    //console.log(gifs)
     let strain = nameIn;
     console.log(strain);
     let strainS = strain.data
@@ -33,6 +33,9 @@ window.onload = function () {
       let strainDes = strainS[ss].desc
       let strainName = strainS[ss].name
       let strainRace = strainS[ss].race
+      let ran = Math.floor(Math.random()*30)
+     let giffy = gif.data.data
+      let gifs = giffy[ran].embed_url
       console.log(strainDes)
       let tester = document.createElement("h1")
       tester.className.add = "see"
