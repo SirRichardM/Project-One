@@ -8,6 +8,8 @@ window.onload = function () {
   let placeHolder = [];
   let flavorInp = document.querySelector("#flavorInp")
   let flavor = document.querySelector("#flavor")
+  let effectInp = document.querySelector("#effectInp")
+  let effect = document.querySelector("#effect")
 
   // define variables for input and submit
 
@@ -86,7 +88,7 @@ window.onload = function () {
 
       indy500.className.add = "see2"
       indy500.className.add = "see"
-      indy500.innerHTML = ` <span class="coloo2"> ${strainName1} </span>`
+      indy500.innerHTML = ` ${strainName1} `
       testChild.appendChild(indy500)
 
      
@@ -94,7 +96,7 @@ window.onload = function () {
     let curious = document.createElement("h2")
     let curious2 = document.createElement("h2")
     
-      curious.innerHTML = "Curious about a specific strain listed heres effects/flavors/medicial use? Try going to the top and searching the strain name!"
+      curious.innerHTML = "Curious about a specific strain listed heres effects/flavors/history? Try going to the top and searching the strain name!"
       testChild.appendChild(curious)
     
 
@@ -126,9 +128,38 @@ window.onload = function () {
 
 
     }
-    
-    
+  
   })
 
+    effect.addEventListener("click", async function (evt) {
+      evt.preventDefault();
+      let effectVal = effectInp.value;
+      console.log(effectVal);
+      let effects = await axios.get(`https://cors-anywhere.herokuapp.com/strainapi.evanbusse.com/jIF7gVD/strains/search/effect/${effectVal}`)
+      console.log(effects);
+      let effekt = effects.data
+      let gif = await axios.get(`http://api.giphy.com/v1/gifs/search?q=${effectVal}&api_key=VC8tFxRJWVzQj5LrvDTYc0YsEgUm4EhH&limit=10`);
+      console.log(gif)
+      let intro = document.createElement("h5")
+      intro.innerHTML = "Results"
+      testChild.appendChild(intro)
+      for (let i = 0; i < 10; i++) {
+        let numero = Math.floor(Math.random()*1200)
+        let effRes = effekt[numero].name;
+        let effRace = effekt[numero].race;
+        let effEFF = effekt[numero].effect
+        let giffy = gif.data.data
+        let gifs = giffy[i].embed_url
+        let effectApp = document.createElement("h6");
+        effectApp.innerHTML = `<embed src="${gifs}"> <br> <span class="coloo"> ${effRes} </span> is a <span class="coloo2"> ${effRace} </span> and can be used to induce or reduce ${effEFF}`
+        testChild.appendChild(effectApp)
+      }
 
-}
+    }
+    
+    )
+  }
+
+
+
+
