@@ -234,7 +234,7 @@ input {
   cursor: pointer;
   background-image: url(smoke.jpg);
   transition-duration: 2s;
-  transform: scale(1.25);
+  transform: scale(1.12);
   transition: all 0.3s ease-in-out 0s;
   box-shadow: 3px 3px 5px black;
 }
@@ -266,4 +266,38 @@ h3 {
   text-align: center;
   margin: 20px;
   color: white;
+}
+
+h3:hover {
+  transition-duration: 5s;
+  transform: scale(1.25);
+  transition: all 0.3s ease-in-out 0s;
+  
+}
+.buts:hover {
+  cursor: pointer;
+  background-image: url(smoke.jpg);
+  transition-duration: 2s;
+  transform: scale(1.12);
+  transition: all 0.3s ease-in-out 0s;
+  box-shadow: 3px 3px 5px black;
+}
+
+h5 {
+  font-family: 'Bangers', cursive;
+  text-shadow: 5px 5px black;;
+  background-image: url(flavors2.jpg);
+  background-size: cover;
+  font-size: 45px;
+  animation: see;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  border: 5px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  width: 600px;
+  text-align: center;
+  margin: 20px;
+  color: white;
+  margin: 25px 100px 25px 100px;
 }

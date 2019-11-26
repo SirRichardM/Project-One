@@ -65,7 +65,15 @@ window.onload = function () {
     );
     console.log(inOrSav);
     let intro = document.createElement("h2")
-    intro.innerHTML = `Looking for an active high eh? Here are some strains that might be good for you`
+    if (strainVal == "sativa") {
+      intro.innerHTML = `Looking for an active high eh? Here are some strains that might be good for you`
+    } else if (strainVal == "indica") {
+      intro.innerHTML = "Time to melt into the couch eh? Here are some options for ya..."
+    } else if  (strainVal == "hybrid"){
+        intro.innerHTML = "Why not have the best of both worlds?"
+    } else {
+      intro.innerHTML = "You only got three choices bud, sativa, indica or hybrid ; )"
+    }
     testChild.appendChild(intro)
     let inOrSavResult = inOrSav.data
     for (let i = 0; i < 10; i++) {
@@ -101,8 +109,8 @@ window.onload = function () {
     let gif = await axios.get(`http://api.giphy.com/v1/gifs/search?q=${flavorVal}&api_key=VC8tFxRJWVzQj5LrvDTYc0YsEgUm4EhH&limit=10`);
     console.log(gif)
     let flavors = flava.data
-    let intro = document.createElement("h3");
-    intro.innerHTML = `Yummmmmmm! Here are some strains that contain an essense of ${flavorVal} . . .`
+    let intro = document.createElement("h5");
+    intro.innerHTML = `Yummmmmmm! Here are some strains that contain an essense of <span class="coloo2"> ${flavorVal} </span> . . .`
     testChild.appendChild(intro);
     for (let i = 0; i < 10; i++) {
       let flavName = flavors[i].name
