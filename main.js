@@ -30,7 +30,11 @@ window.onload = function() {
     let strain = nameIn;
     console.log(strain);
     let strainS = strain.data;
-
+    if (strainS.length == 0) {
+      let bs = document.createElement("h1");
+      bs.innerHTML = `Sorry bud, no results for <span class="coloo3"> ${inputVal} </span> ! Maybe try another?`
+      testChild.appendChild(bs)
+    }
     for (let i = 0; i < 10; i++) {
       let ss = Math.floor(Math.random() * 10);
       if (strainS.length < 5) {
@@ -60,7 +64,7 @@ window.onload = function() {
     console.log(inOrSav);
     let intro = document.createElement("h6");
     if (strainVal == "sativa") {
-      intro.innerHTML = `Looking for an active high eh? Here are some strains that might be good for you`;
+      intro.innerHTML = `Looking for an energetic high eh? Maybe get a bit creative? Here are some options for ya..`;
     } else if (strainVal == "indica") {
       intro.innerHTML =
         "Time to melt into the couch eh? Here are some options for ya...";
@@ -68,7 +72,7 @@ window.onload = function() {
       intro.innerHTML = "Why not have the best of both worlds?";
     } else {
       intro.innerHTML =
-        "You only got three choices bud, sativa, indica or hybrid ; )";
+        "You only got three choices bud, sativa, indica or hybrid";
     }
     testChild.appendChild(intro);
     let inOrSavResult = inOrSav.data;
@@ -109,10 +113,17 @@ window.onload = function() {
       `http://api.giphy.com/v1/gifs/search?q=${flavorVal}&api_key=VC8tFxRJWVzQj5LrvDTYc0YsEgUm4EhH&limit=10`
     );
     console.log(gif);
+    
     let flavors = flava.data;
-    let intro = document.createElement("h5");
-    intro.innerHTML = `Yummmmmmm! Here are some strains that contain a <span class="coloo2"> ${flavorVal} </span> taste. . .`;
-    testChild.appendChild(intro);
+    if (flavors.length == 0) {
+      let bsflav = document.createElement("h5")
+      bsflav.innerHTML = `No flavor profiles for ${flavorVal}! Try cheese, apple, coffee, woody, earthy, berry, blueberry, pine, minty, citrus, tropical, lemon, lime, honey, skunk, nutty, sweet, strawberry, grape or butter! `
+      testChild.appendChild(bsflav)
+    } else {
+      let intro = document.createElement("h5");
+      intro.innerHTML = `Yummmmmmm! Here are some strains that contain a <span class="coloo2"> ${flavorVal} </span> taste. . .`;
+      testChild.appendChild(intro);
+    }
     for (let i = 0; i < 10; i++) {
       let flavName = flavors[i].name;
       let flavRace = flavors[i].race;
@@ -127,6 +138,9 @@ window.onload = function() {
       flavorApp.innerHTML = `<embed src="${gifs}"> <br> <span class="coloo"> ${flavName} </span> which is a <span class="coloo2"> ${flavRace} </span> strain`;
       testChild.appendChild(flavorApp);
     }
+    let ender = document.createElement("h2")
+    ender.innerHTML = "Want some more information on one of the strains listed? Try seardhing it under 'Strain Name' !"
+    testChild.appendChild(ender)
   });
 
   effect.addEventListener("click", async function(evt) {
@@ -142,9 +156,14 @@ window.onload = function() {
       `http://api.giphy.com/v1/gifs/search?q=${effectVal}&api_key=VC8tFxRJWVzQj5LrvDTYc0YsEgUm4EhH&limit=10`
     );
     console.log(gif);
-    let intro = document.createElement("h5");
-    intro.innerHTML = "Results";
-    testChild.appendChild(intro);
+    // let intro = document.createElement("h5");
+    // intro.innerHTML = "Results";
+    if (effekt.length == 0) {
+      let nonsense = document.createElement("h6")
+      
+      nonsense.innerHTML = ` Sorry bud, no results for <span class="coloo"> ${effectVal}. </span> The best options for effects would be <span class="coloo3"> relaxed, happy, euphoric, creative, hungry, energetic, giggly, uplifted, focused and aroused.</span> If you are looking for medical use some options are <span class="coloo3"> depression, fatigue, pain, insomnia, nausea, headaches, inflammation and muscle spams </span>`
+      testChild.appendChild(nonsense)
+    }   // testChild.appendChild(intro);
     for (let i = 0; i < 10; i++) {
       let numero = Math.floor(Math.random() * 1200);
       if (effekt.length < 1000 || effekt.length < 500) {
@@ -167,7 +186,7 @@ window.onload = function() {
         effectVal == "muscle spasms" ||
         effectVal == "inflammation"
       ) {
-        effectApp.innerHTML = `<embed src="${gifs}"> <br> <span class="coloo"> ${effRes} </span> is a <span class="coloo2"> ${effRace} </span> and should help you clear that ${effEFF} right up!`;
+        effectApp.innerHTML = `<embed src="${gifs}"> <br> <span class="coloo"> ${effRes} </span> is a <span class="coloo2"> ${effRace} </span> and should help you clear that <span class="coloo3"> ${effEFF} </span> right up!`;
       } else if (
         effectVal == "happy" ||
         effectVal == "euphoric" ||
@@ -180,7 +199,7 @@ window.onload = function() {
         effectVal == "focused" ||
         effectVal == "uplifted"
       ) {
-        effectApp.innerHTML = `<embed src="${gifs}"> <br> <span class="coloo"> ${effRes} </span> is a <span class="coloo2"> ${effRace} </span> and should help you get into a nice ${effEFF} mood`;
+        effectApp.innerHTML = `<embed src="${gifs}"> <br> <span class="coloo"> ${effRes} </span> is a <span class="coloo2"> ${effRace} </span> and should help you get into a nice <span class="coloo3"> ${effEFF} </span> mood`;
       } else {
         effectApp.innerHTML = `Sorry none of those fit the search parameter, if you are looking for medical use some options are depression, fatigue, pain, insomnia, nausea, headaches, inflammation and muscle spams` 
       }

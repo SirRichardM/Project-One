@@ -24,7 +24,7 @@ h2 {
   color: white;
   font-size: 80px;
   background-size: auto;
-  margin: 25px 100px 25px 100px;
+  margin: 25px 100px 10px 100px;
   border-radius: 10px;
   
   
@@ -55,7 +55,7 @@ img:hover {
 }
 
 h2:hover {
-  background-image: url(nugs.jpg);
+  background-image: url(joints.jpg);
   transition-duration: 5s;
   
 }
@@ -65,7 +65,7 @@ h4{
   text-shadow: 3px 3px black;;
   background-image: url(pebbles.jpg);
   
-  font-size: 25px;
+  font-size: 40px;
   animation: see;
   animation-duration: 2s;
   animation-iteration-count: 1;
@@ -95,6 +95,8 @@ h4:hover {
 body {
   display: inline;
   background-color: white;
+  
+
   
 }
 
@@ -186,8 +188,8 @@ body {
 
 h1 {
   font-family: 'Bangers', cursive;
-  text-shadow: 3px 3px black;;
-  background-image: url(field.jpg);
+  text-shadow: 5px 3px  black;
+  background-image: url(backgroundBuds.jpg);
   
  
   animation: see;
@@ -284,10 +286,11 @@ h3 {
 }
 
 h3:hover {
-  transition-duration: 10s;
-  transform: rotatez(-25deg);
+  transition-duration: 5s;
+  transform: rotatez(-5deg);
+  background-image:url(nugs.jpg);
   
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s; 
   
 }
 .buts:hover {
@@ -336,6 +339,7 @@ h6 {
   color: white;
   margin: 25px 100px 25px 100px;
   
+  
 }
 
 h6:hover {
@@ -364,7 +368,7 @@ p {
 }
 
 h1:hover {
-  background-image: url(backgroundBuds.jpg);
+  background-image: url(smokeagain.jpg);
   transition-duration: 3s;
 }
 footer {
@@ -375,4 +379,8 @@ footer {
   font-family: 'Bangers', cursive;
   text-shadow: 3px 3px black;
   border: 3px solid black;
+}
+
+.coloo3 {
+  color: yellow;
 }
