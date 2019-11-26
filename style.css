@@ -14,7 +14,7 @@ header {
 }
 
 h2 {
-  background-image: url(pebbles.jpg);
+  background-image: url(purps.jpg);
   font-family: 'Bangers', cursive;
   padding: 25px;
   border: 5px solid black;
@@ -181,8 +181,8 @@ body {
 h1 {
   font-family: 'Bangers', cursive;
   text-shadow: 3px 3px black;;
-  background-image: url(smoke2.jpeg);
-  background-size: cover;
+  background-image: url(pebbles.jpg);
+  
  
   animation: see;
   animation-duration: 2s;
@@ -223,7 +223,7 @@ input {
   border: 3px solid black;
   padding: 5px;
   border-radius: 25px;
-  background-image: url(pebbles.jpg);
+  background-image: url(nugs.jpg);
   font-family: 'Bangers', cursive;
   text-shadow: 2px 2px black;
   color: white;
@@ -243,6 +243,8 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: black;
+
 
 }
 
@@ -288,7 +290,7 @@ h5 {
   text-shadow: 5px 5px black;;
   background-image: url(flavors2.jpg);
   background-size: cover;
-  font-size: 45px;
+  font-size: 60px;
   animation: see;
   animation-duration: 2s;
   animation-iteration-count: 1;
@@ -300,4 +302,53 @@ h5 {
   margin: 20px;
   color: white;
   margin: 25px 100px 25px 100px;
+}
+
+h6 {
+  font-family: 'Bangers', cursive;
+  text-shadow: 5px 5px black;;
+  background-image: url(frosty.jpg);
+  background-size: cover;
+  font-size: 60px;
+  animation: see;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  border: 5px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  width: 600px;
+  text-align: center;
+  margin: 20px;
+  color: white;
+  margin: 25px 100px 25px 100px;
+}
+
+h6:hover {
+  background-image: url(smoke.jpg);
+  transition-duration: 4s;
+}
+
+p {
+  background-image: url(pebbles.jpg);
+  font-family: 'Bangers', cursive;
+  padding: 25px;
+  border: 5px solid black;
+  text-align: center;
+  text-shadow: 7px 7px black;
+  color: white;
+  font-size: 75px;
+  background-size: auto;
+  margin: 25px 100px 25px 100px;
+  border-radius: 10px;
+}
+
+.see2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+h1:hover {
+  background-image: url(smoke.jpg);
+  transition-duration: 3s;
 }

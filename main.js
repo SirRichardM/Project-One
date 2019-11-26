@@ -64,7 +64,7 @@ window.onload = function () {
     let inOrSav = await axios.get(`https://cors-anywhere.herokuapp.com/strainapi.evanbusse.com/jIF7gVD/strains/search/race/${strainVal}`
     );
     console.log(inOrSav);
-    let intro = document.createElement("h2")
+    let intro = document.createElement("h6")
     if (strainVal == "sativa") {
       intro.innerHTML = `Looking for an active high eh? Here are some strains that might be good for you`
     } else if (strainVal == "indica") {
@@ -83,9 +83,10 @@ window.onload = function () {
       let strainRace1 = inOrSavResult[ss].race
 
       let indy500 = document.createElement("h1")
-      
+
+      indy500.className.add = "see2"
       indy500.className.add = "see"
-      indy500.innerHTML = ` ${strainName1}`
+      indy500.innerHTML = ` <span class="coloo2"> ${strainName1} </span>`
       testChild.appendChild(indy500)
 
      
@@ -110,7 +111,7 @@ window.onload = function () {
     console.log(gif)
     let flavors = flava.data
     let intro = document.createElement("h5");
-    intro.innerHTML = `Yummmmmmm! Here are some strains that contain an essense of <span class="coloo2"> ${flavorVal} </span> . . .`
+    intro.innerHTML = `Yummmmmmm! Here are some strains that contain a <span class="coloo2"> ${flavorVal} </span> taste. . .`
     testChild.appendChild(intro);
     for (let i = 0; i < 10; i++) {
       let flavName = flavors[i].name
