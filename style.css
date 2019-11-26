@@ -308,7 +308,7 @@ h5 {
   background-image: url(flavors2.jpg);
   background-size: cover;
   font-size: 60px;
-  animation: see;
+  animation: newanim;
   animation-duration: 2s;
   animation-iteration-count: 1;
   border: 5px solid black;
@@ -333,11 +333,13 @@ h6 {
   border: 5px solid black;
   padding: 20px;
   border-radius: 10px;
-  width: 600px;
+  width: 700px;
   text-align: center;
   margin: 20px;
   color: white;
   margin: 25px 100px 25px 100px;
+  
+  
   
   
 }
@@ -383,4 +385,33 @@ footer {
 
 .coloo3 {
   color: yellow;
+}
+
+button {
+  margin: 5px;
+  border: 3px solid black;
+  padding: 5px;
+  border-radius: 25px;
+  background-image: url(COLOR.jpg);
+  background-size: cover;
+  font-family: 'Bangers', cursive;
+  text-shadow: 2px 2px black;
+  color: white;
+  font-size: 25px;
+}
+
+.spin:hover {
+  animation: newanim;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes newanim {
+  0% {
+    transform: rotatey(0deg);
+
+  }
+  100% {
+    transform: rotatey(360deg);
+  }
 }

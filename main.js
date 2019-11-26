@@ -121,6 +121,7 @@ window.onload = function() {
       testChild.appendChild(bsflav)
     } else {
       let intro = document.createElement("h5");
+      intro.className.add = "spin"
       intro.innerHTML = `Yummmmmmm! Here are some strains that contain a <span class="coloo2"> ${flavorVal} </span> taste. . .`;
       testChild.appendChild(intro);
     }
@@ -139,7 +140,7 @@ window.onload = function() {
       testChild.appendChild(flavorApp);
     }
     let ender = document.createElement("h2")
-    ender.innerHTML = "Want some more information on one of the strains listed? Try seardhing it under 'Strain Name' !"
+    ender.innerHTML = "Want some more information on one of the strains listed? Try searching it under 'Strain Name' !"
     testChild.appendChild(ender)
   });
 
@@ -207,3 +208,7 @@ window.onload = function() {
     }
   });
 };
+
+function myButton() {
+  location.reload();
+}
