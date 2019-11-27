@@ -62,6 +62,9 @@ window.onload = function() {
       `https://cors-anywhere.herokuapp.com/strainapi.evanbusse.com/jIF7gVD/strains/search/race/${strainVal}`
     );
     console.log(inOrSav);
+    let gif = await axios.get(
+      "http://api.giphy.com/v1/gifs/search?q=weed&api_key=VC8tFxRJWVzQj5LrvDTYc0YsEgUm4EhH&limit=30"
+    );
     let intro = document.createElement("h6");
     if (strainVal == "sativa") {
       intro.innerHTML = `Looking for an energetic high eh? Maybe get a bit creative? Here are some options for ya..`;
@@ -77,26 +80,30 @@ window.onload = function() {
     testChild.appendChild(intro);
     let inOrSavResult = inOrSav.data;
     for (let i = 0; i < 10; i++) {
-      let ss = Math.floor(Math.random() * 500);
-      if ( inOrSavResult.length < 420) {
+      let ss = Math.floor(Math.random() * 1000);
+      if (inOrSavResult.length < 420) {
         ss = Math.floor(Math.random() * 415)
+      } else if (inOrSavResult.length < 660) {
+        ss = Math.floor(Math.random() * 650)
       }
       //let strainDes1 = inOrSavResult[ss].desc
       let strainName1 = inOrSavResult[ss].name;
       let strainRace1 = inOrSavResult[ss].race;
+      let giffy = gif.data.data;
+      let gifs = giffy[i].embed_url;
 
       let indy500 = document.createElement("h4");
 
       indy500.className.add = "see2";
       indy500.className.add = "see";
-      indy500.innerHTML = ` ${strainName1} `;
+      indy500.innerHTML = ` <embed src=${gifs}> <br> ${strainName1} `;
       testChild.appendChild(indy500);
     }
     let curious = document.createElement("h2");
     let curious2 = document.createElement("h2");
 
     curious.innerHTML =
-      "Curious about a specific strain listed heres effects/flavors/history? Try going to the top and searching the strain name!";
+      "Curious about a specific strain listed heres effects/flavors/history? Try going to the top and searching 'Strain Name'";
     testChild.appendChild(curious);
   });
 
@@ -122,7 +129,7 @@ window.onload = function() {
     } else {
       let intro = document.createElement("h5");
       intro.className.add = "spin"
-      intro.innerHTML = `Yummmmmmm! Here are some strains that contain a <span class="coloo2"> ${flavorVal} </span> taste. . .`;
+      intro.innerHTML = `Yummmmmmm! Here are some strains that contain a <span class="coloo2"> ${flavorVal} </span> taste. . . <br>`;
       testChild.appendChild(intro);
     }
     for (let i = 0; i < 10; i++) {
@@ -176,6 +183,8 @@ window.onload = function() {
       let giffy = gif.data.data;
       let gifs = giffy[i].embed_url;
       let effectApp = document.createElement("h6");
+      let workpls = "workpls"
+      effectApp.className.add = workpls
       if (
         effectVal == "fatigue" ||
         effectVal == "depression" ||
@@ -204,8 +213,12 @@ window.onload = function() {
       } else {
         effectApp.innerHTML = `Sorry none of those fit the search parameter, if you are looking for medical use some options are depression, fatigue, pain, insomnia, nausea, headaches, inflammation and muscle spams` 
       }
+      
         testChild.appendChild(effectApp);
     }
+    let curious = document.createElement("h2")
+    curious.innerHTML = "Want some more information on one of the strains listed? Try searching it under 'Strain Name' at the top of the page !"
+    testChild.appendChild(curious)
   });
 };
 
