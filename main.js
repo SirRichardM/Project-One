@@ -14,6 +14,7 @@ window.onload = function() {
 
   submit.addEventListener("click", async function(evt) {
     evt.preventDefault();
+    testChild.innerHTML = ""
     let inputVal = input.value;
     console.log(inputVal);
     let nameIn = await axios.get(
@@ -51,11 +52,14 @@ window.onload = function() {
       tester.className.add = "see";
       tester.innerHTML = `<embed src="${gifs}"> <br> <span class ="coloo"> ${strainName} </span> is a <span class="coloo2"> ${strainRace} </span>: ${strainDes}`;
       testChild.appendChild(tester);
+      
     }
+      
   });
 
   strain.addEventListener("click", async function(evt) {
     evt.preventDefault();
+    testChild.innerHTML = ""
     let strainVal = strainInp.value;
     console.log(strainVal);
     let inOrSav = await axios.get(
@@ -110,6 +114,7 @@ window.onload = function() {
   // so this "race" search works but does not log descriptions or effects
   flavor.addEventListener("click", async function(evt) {
     evt.preventDefault();
+    testChild.innerHTML = ""
     let flavorVal = flavorInp.value;
     console.log(flavorVal);
     let flava = await axios.get(
@@ -149,10 +154,12 @@ window.onload = function() {
     let ender = document.createElement("h2")
     ender.innerHTML = "Want some more information on one of the strains listed? Try searching it under 'Strain Name' !"
     testChild.appendChild(ender)
+    
   });
 
   effect.addEventListener("click", async function(evt) {
     evt.preventDefault();
+    testChild.innerHTML = ""
     let effectVal = effectInp.value;
     console.log(effectVal);
     let effects = await axios.get(
