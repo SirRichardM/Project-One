@@ -129,7 +129,7 @@ window.onload = function() {
     let flavors = flava.data;
     if (flavors.length == 0) {
       let bsflav = document.createElement("h5")
-      bsflav.innerHTML = `No flavor profiles for ${flavorVal}! Try cheese, apple, coffee, woody, earthy, berry, blueberry, pine, minty, citrus, tropical, lemon, lime, honey, skunk, nutty, sweet, strawberry, grape or butter! `
+      bsflav.innerHTML = `No flavor profiles for ${flavorVal}! Try <span class="coloo3"> cheese, apple, coffee, woody, earthy, berry, blueberry, pine, minty, citrus, tropical, lemon, lime, honey, skunk, nutty, sweet, strawberry, grape or butter </span>! `
       testChild.appendChild(bsflav)
     } else {
       let intro = document.createElement("h5");
@@ -229,6 +229,4 @@ window.onload = function() {
   });
 };
 
-function myButton() {
-  location.reload();
-}
+
