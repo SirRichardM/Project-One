@@ -195,7 +195,7 @@ h1 {
   font-family: 'Bangers', cursive;
   text-shadow: 5px 5px  black;
   background-image: url(backgroundBuds.jpg);
-  
+  font-size: 35px;
  
   animation: see;
   animation-duration: 2s;
@@ -459,4 +459,16 @@ h5:hover {
   flex-wrap: wrap;
   flex-direction: row;
   background-image: url;
+}
+
+@media (min-width: 400px) {
+  header {
+    font-size: 75px;
+  }
+  input {
+    font-size: 10px;
+  }
+  h2 {
+    font-size: 35px;
+  }
 }

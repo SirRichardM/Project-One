@@ -100,7 +100,7 @@ window.onload = function() {
 
       indy500.className.add = "see2";
       indy500.className.add = "see";
-      indy500.innerHTML = ` <embed src=${gifs}> <br> ${strainName1} `;
+      indy500.innerHTML = ` <embed src=${gifs}> <br> <span class="coloo"> ${strainName1} </span> `;
       testChild.appendChild(indy500);
     }
     let curious = document.createElement("h2");
