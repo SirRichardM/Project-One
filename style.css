@@ -505,4 +505,6 @@ h5:hover {
 
 .new {
   background-image: url(newrain3.jpg);
+  border-radius: inherit;
+  
 }
